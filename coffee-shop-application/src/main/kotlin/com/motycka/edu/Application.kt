@@ -8,6 +8,10 @@ import com.motycka.edu.customer.InternalCustomerService
 import com.motycka.edu.menu.MenuRepositoryImpl
 import com.motycka.edu.menu.MenuService
 import com.motycka.edu.menu.menuRoutes
+import com.motycka.edu.order.controller.orderRoutes
+import com.motycka.edu.order.dao.repo.impl.OrderItemRepositoryImpl
+import com.motycka.edu.order.dao.repo.impl.OrderRepositoryImpl
+import com.motycka.edu.order.service.impl.DefaultOrderService
 import com.motycka.edu.security.AuthenticationService
 import com.motycka.edu.security.JwtService
 import com.motycka.edu.security.loginRoutes
@@ -43,6 +47,15 @@ fun main() {
 
         val menuRepository = MenuRepositoryImpl()
         val menuService = MenuService(menuRepository = menuRepository)
+        val orderRepository = OrderRepositoryImpl()
+        val orderItemRepository = OrderItemRepositoryImpl()
+        val customerRepository = CustomerRepositoryImpl()
+        val orderService = DefaultOrderService(
+            customerRepository = customerRepository,
+            menuItemRepository = menuRepository,
+            orderRepository = orderRepository,
+            orderItemRepository = orderItemRepository,
+        )
         val jwtGenerator = JwtService(config = applicationConfig)
         val userRepository = UserRepositoryImpl()
         val authenticationService = AuthenticationService(
@@ -67,6 +80,7 @@ fun main() {
 
             authenticate(AUTH_JWT) {
                 menuRoutes(menuService, API_PATH)
+                orderRoutes(orderService, API_PATH)
                 // add order routes
             }
         }

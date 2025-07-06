@@ -10,12 +10,12 @@ Content-Type: application/json
 ### Get all menu items using JWT token
 # Replace the token with the one received from the login request
 GET http://localhost:8080/api/menuitems
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJtZW51LWFwaS1hdWRpZW5jZSIsImlzcyI6Im1lbnUtYXBpIiwidXNlcklkIjoxLCJjdXN0b21lcklkIjoxLCJyb2xlIjoiU1RBRkYiLCJleHAiOjE3NTAzNDIyMzZ9.pwu7AiLDrJ1yN4JB1nSjI8dCoEDIlz1_Tu0hLeuvHJI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJtZW51LWFwaS1hdWRpZW5jZSIsImlzcyI6Im1lbnUtYXBpIiwidXNlcklkIjoyLCJjdXN0b21lcklkIjoyLCJyb2xlIjoiU1RBRkYiLCJleHAiOjE3NTE3Mzk4NTd9.jrK67_JCsgi0P01CyIL3jVCTsPG7mMtDe1-10zFVKJo
 
 ### Get menu item by ID using JWT token
 # Replace the token with the one received from the login request
 GET http://localhost:8080/api/menuitems/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJtZW51LWFwaS1hdWRpZW5jZSIsImlzcyI6Im1lbnUtYXBpIiwicHJpbmNpcGFsIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NTAyMzk3ODR9.0XMhHiE5KLbXxscKlzZev-dt0VMoVOxQTAuw-zTu8ws
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJtZW51LWFwaS1hdWRpZW5jZSIsImlzcyI6Im1lbnUtYXBpIiwidXNlcklkIjoyLCJjdXN0b21lcklkIjoyLCJyb2xlIjoiU1RBRkYiLCJleHAiOjE3NTE3Mzk4NTd9.jrK67_JCsgi0P01CyIL3jVCTsPG7mMtDe1-10zFVKJo
 
 ### Create new menu item using JWT token
 # Replace the token with the one received from the login request
@@ -44,3 +44,8 @@ Content-Type: application/json
 ### Delete menu item using JWT token
 DELETE http://localhost:8080/api/menuitems/6
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJtZW51LWFwaS1hdWRpZW5jZSIsImlzcyI6Im1lbnUtYXBpIiwicHJpbmNpcGFsIjoiYWRtaW4iLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3NTAyMzk3ODR9.0XMhHiE5KLbXxscKlzZev-dt0VMoVOxQTAuw-zTu8ws
+
+
+### Get orders
+GET http://localhost:8080/api/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJtZW51LWFwaS1hdWRpZW5jZSIsImlzcyI6Im1lbnUtYXBpIiwidXNlcklkIjoyLCJjdXN0b21lcklkIjoyLCJyb2xlIjoiU1RBRkYiLCJleHAiOjE3NTE3NjI1Mzl9.TvJYk1lH7Xt5L72KvYjUUzS2P5Nai-rRv8VwdoRHMHI

@@ -1,5 +1,6 @@
-package com.motycka.edu.order
+package com.motycka.edu.order.dto
 
+import com.motycka.edu.order.dao.entity.OrderStatus
 import kotlinx.serialization.Serializable
 
 @Serializable
