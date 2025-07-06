@@ -1,5 +1,6 @@
 package com.motycka.edu
 
+import com.motycka.edu.order.dao.entity.OrderStatus
 import org.jetbrains.exposed.dao.id.LongIdTable
 import org.jetbrains.exposed.sql.Table
 import org.jetbrains.exposed.sql.javatime.datetime
@@ -21,6 +22,8 @@ object OrderTable : LongIdTable("menu_item") {
     val customerName = text("customer_name")
     val orderDate = datetime("order_date")
     val totalAmount = double("total_amount")
+    val status = text("status").default(OrderStatus.PENDING.name)
+    val isPaid = bool("is_paid").default(false)
 }
 
 object OrderItemTable : Table("order_item") {

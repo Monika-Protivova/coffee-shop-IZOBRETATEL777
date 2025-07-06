@@ -1,5 +1,7 @@
 package com.motycka.edu.config
 
+import com.motycka.edu.OrderItemTable
+import com.motycka.edu.OrderTable
 import com.motycka.edu.customer.CustomerDAO
 import com.motycka.edu.customer.CustomerTable
 import com.motycka.edu.menu.MenuItemDAO
@@ -27,6 +29,8 @@ fun Application.configureDatabases() {
         SchemaUtils.create(UserTable)
         SchemaUtils.create(MenuItemTable)
         SchemaUtils.create(CustomerTable)
+        SchemaUtils.create(OrderTable)
+        SchemaUtils.create(OrderItemTable)
 
         UserDAO.new {
             username = "admin"
